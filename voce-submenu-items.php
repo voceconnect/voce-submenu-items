@@ -1,11 +1,11 @@
 <?php
 /*
-Plugin Name: Voce Submenu Nav Menu Items
-Plugin URI: http://voceconnect.com
-Description: Avoid giant Nav Menus by aggregating multiple "submenus" into a single Menu.
-Version: 1.0
-Author: Jeff Stieler
-License: GPL2
+  Plugin Name: Voce Submenu Nav Menu Items
+  Plugin URI: http://voceconnect.com
+  Description: Avoid giant Nav Menus by aggregating multiple "submenus" into a single Menu.
+  Version: 1.0
+  Author: Jeff Stieler
+  License: GPL2
 */
 
 class Voce_Submenu_Nav_Menu_Items {
