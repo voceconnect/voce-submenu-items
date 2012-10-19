@@ -1,5 +1,5 @@
 === Voce Submenu Items ===
-Contributors: jeffstieler
+Contributors: jeffstieler, voceplatforms
 Tags: menus, navigation, nested
 Requires at least: 3.4.2
 Tested up to: 3.4.2
