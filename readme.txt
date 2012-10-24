@@ -1,9 +1,9 @@
 === Voce Submenu Items ===
-Contributors: jeffstieler, voceplatforms
+Contributors: jeffstieler, voceplatforms, csloisel
 Tags: menus, navigation, nested
 Requires at least: 3.4.2
 Tested up to: 3.4.2
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,6 +27,9 @@ When a Menu containing other Menus as items is rendered, the "submenu" item is e
 1. The resulting menu.
 
 == Changelog ==
+
+= 1.1 =
+* Submenu item can now be a child of another menu item. (bug fix)
 
 = 1.0 =
 * Initial release.
