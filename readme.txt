@@ -18,13 +18,13 @@ When a Menu containing other Menus as items is rendered, the "submenu" item is e
 == Installation ==
 
 1. Upload `voce-submenu-items` to the `/wp-content/plugins/` directory
-1. Activate the plugin through the 'Plugins' menu in WordPress
+2. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Screenshots ==
 
 1. Menus admin screen showing "Navigation Menus" metabox and a menu containing another menu as an item.
-1. Menus admin screen showing the contents of the "sub" menu.
-1. The resulting menu.
+2. Menus admin screen showing the contents of the "sub" menu.
+3. The resulting menu.
 
 == Changelog ==
 
