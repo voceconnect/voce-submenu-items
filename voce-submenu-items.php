@@ -3,7 +3,7 @@
   Plugin Name: Voce Submenu Nav Menu Items
   Plugin URI: http://voceconnect.com
   Description: Avoid giant Nav Menus by aggregating multiple "submenus" into a single Menu.
-  Version: 1.1
+  Version: 1.2
   Author: Jeff Stieler
   License: GPL2
 */
