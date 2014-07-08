@@ -6,3 +6,10 @@ set :type, 'plugin'
 
 set :svn_repository, "http://plugins.svn.wordpress.org/#{fetch(:application)}/"
 set :svn_deploy_to, "trunk"
+
+## additional files to exclude from committing to svn
+set :build_folders, (
+  fetch(:build_folders) << %w{
+    config
+  }
+).flatten
