@@ -84,24 +84,24 @@ class Voce_Submenu_Nav_Menu_Items {
 
 				// If item has a parent, Give the ID to all items being spliced
 				if ( $parent_id = $menu_item->menu_item_parent ) {
-					foreach ( $submenu_items as &$menu_item ) {
-						if ( empty($menu_item->menu_item_parent) )
-							$menu_item->menu_item_parent = $parent_id;
+					foreach ( $submenu_items as &$item ) {
+						if ( empty($item->menu_item_parent) )
+							$item->menu_item_parent = $parent_id;
 					}
 				}
 
 				// Loop through and get menu_items with children
 				$menu_items_with_children = array();
-				foreach ( $submenu_items as $menu_item ) {
-					if ( $menu_item->menu_item_parent )
-						$menu_items_with_children[$menu_item->menu_item_parent] = true;
+				foreach ( $submenu_items as $item ) {
+					if ( $item->menu_item_parent )
+						$menu_items_with_children[$item->menu_item_parent] = true;
 				}
 
 				// Add the menu-item-has-children class where applicable
 				if ( $menu_items_with_children ) {
-					foreach ( $submenu_items as &$menu_item ) {
-						if ( isset( $menu_items_with_children[ $menu_item->ID ] ) )
-							$menu_item->classes[] = 'menu-item-has-children';
+					foreach ( $submenu_items as &$item ) {
+						if ( isset( $menu_items_with_children[ $item->ID ] ) )
+							$item->classes[] = 'menu-item-has-children';
 					}
 				}
 
