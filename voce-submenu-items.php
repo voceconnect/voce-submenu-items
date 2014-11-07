@@ -82,19 +82,19 @@ class Voce_Submenu_Nav_Menu_Items {
 				 ( 'nav_menu' === $menu_item->object ) &&
 				 ( $submenu_items = wp_get_nav_menu_items( $menu_item->object_id ) ) ) {
 
+				// Loop through and get menu_items with children
+				$items_with_children = array();
+				foreach ( $submenu_items as $item2 ) {
+					if ( $item2->menu_item_parent )
+						$items_with_children[$item2->menu_item_parent] = true;
+				}
+
 				// If item has a parent, Give the ID to all items being spliced
 				if ( $parent_id = $menu_item->menu_item_parent ) {
 					foreach ( $submenu_items as &$item1 ) {
 						if ( empty($item1->menu_item_parent) )
 							$item1->menu_item_parent = $parent_id;
 					}
-				}
-
-				// Loop through and get menu_items with children
-				$items_with_children = array();
-				foreach ( $submenu_items as $item2 ) {
-					if ( $item2->menu_item_parent )
-						$items_with_children[$item2->menu_item_parent] = true;
 				}
 
 				// Add the menu-item-has-children class where applicable
