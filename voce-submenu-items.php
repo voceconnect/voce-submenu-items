@@ -74,31 +74,31 @@ class Voce_Submenu_Nav_Menu_Items {
 	 */
 	function expand_submenu_items( $sorted_menu_items ) {
 
-                $i = 1;
-                while ( $i <= count( $sorted_menu_items ) ) {
-                        $menu_item = $sorted_menu_items[$i];
+		$i = 1;
+		while ( $i <= count( $sorted_menu_items ) ) {
+			$menu_item = $sorted_menu_items[$i];
 
-                        if ( ( 'taxonomy' === $menu_item->type ) &&
-                                 ( 'nav_menu' === $menu_item->object ) &&
-                                 ( $submenu_items = wp_get_nav_menu_items( $menu_item->object_id ) ) ) {
+			if ( ( 'taxonomy' === $menu_item->type ) &&
+				 ( 'nav_menu' === $menu_item->object ) &&
+				 ( $submenu_items = wp_get_nav_menu_items( $menu_item->object_id ) ) ) {
 
-                                // If item has a parent, Give the ID to all items being spliced
-                                if ( $parent_id = $menu_item->menu_item_parent ) {
-                                        foreach ( $submenu_items as $k => $item ) {
-                                                $submenu_items[$k]->menu_item_parent = $parent_id;
-                                        }
-                                }
+				// If item has a parent, Give the ID to all items being spliced
+				if ( $parent_id = $menu_item->menu_item_parent ) {
+					foreach ( $submenu_items as $k => $item ) {
+						$submenu_items[$k]->menu_item_parent = $parent_id;
+					}
+				}
 
-                                array_splice( $sorted_menu_items, ( $i - 1 ), 1, $submenu_items );
-                                $sorted_menu_items = array_combine( range( 1, count( $sorted_menu_items ) ), array_values( $sorted_menu_items ) );
-                                $i = 0;
-                        }
-                        $i++;
-                }
+				array_splice( $sorted_menu_items, ( $i - 1 ), 1, $submenu_items );
+				$sorted_menu_items = array_combine( range( 1, count( $sorted_menu_items ) ), array_values( $sorted_menu_items ) );
+				$i = 0;
+			}
+			$i++;
+		}
 
-                return $sorted_menu_items;
+		return $sorted_menu_items;
 
-        }
+	}
 
 }
 
