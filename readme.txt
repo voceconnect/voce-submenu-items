@@ -3,7 +3,7 @@ Contributors: jeffstieler, voceplatforms, csloisel
 Tags: menus, navigation, nested
 Requires at least: 3.4.2
 Tested up to: 3.5.1
-Stable tag: 1.2.2
+Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,6 +27,10 @@ When a Menu containing other Menus as items is rendered, the "submenu" item is e
 3. The resulting menu.
 
 == Changelog ==
+
+= 1.3 =
+* Fixing big with nested menus
+* Adding proper css class to parent items
 
 = 1.2.2 =
 * VIP optimized images
