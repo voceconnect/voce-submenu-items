@@ -84,16 +84,16 @@ class Voce_Submenu_Nav_Menu_Items {
 
 				// Loop through and get menu_items with children
 				$items_with_children = array();
-				foreach ( $submenu_items as $item2 ) {
-					if ( $item2->menu_item_parent )
-						$items_with_children[$item2->menu_item_parent] = true;
+				foreach ( $submenu_items as $item1 ) {
+					if ( $item1->menu_item_parent )
+						$items_with_children[$item1->menu_item_parent] = true;
 				}
 
 				// If item has a parent, Give the ID to all items being spliced
 				if ( $parent_id = $menu_item->menu_item_parent ) {
-					foreach ( $submenu_items as &$item1 ) {
-						if ( empty($item1->menu_item_parent) )
-							$item1->menu_item_parent = $parent_id;
+					foreach ( $submenu_items as &$item2 ) {
+						if ( empty($item2->menu_item_parent) )
+							$item2->menu_item_parent = $parent_id;
 					}
 				}
 
