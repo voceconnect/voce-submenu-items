@@ -84,9 +84,9 @@ class Voce_Submenu_Nav_Menu_Items {
 
 				// If item has a parent, Give the ID to all items being spliced
 				if ( $parent_id = $menu_item->menu_item_parent ) {
-					foreach ( $submenu_items as $k => $item ) {
+					foreach ( $submenu_items as &$item ) {
 						if ( empty($item->menu_item_parent) )
-							$submenu_items[$k]->menu_item_parent = $parent_id;
+							$item->menu_item_parent = $parent_id;
 					}
 				}
 
