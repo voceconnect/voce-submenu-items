@@ -100,7 +100,7 @@ class Voce_Submenu_Nav_Menu_Items {
 				// Add the menu-item-has-children class where applicable
 				if ( $items_with_children ) {
 					foreach ( $submenu_items as &$item3 ) {
-						if ( isset( $menu_items_with_children[ $item3->ID ] ) )
+						if ( isset( $items_with_children[ $item3->ID ] ) )
 							$item3->classes[] = 'menu-item-has-children';
 					}
 				}
