@@ -91,14 +91,14 @@ class Voce_Submenu_Nav_Menu_Items {
 				}
 
 				// Loop through and get menu_items with children
-				$menu_items_with_children = array();
+				$items_with_children = array();
 				foreach ( $submenu_items as $item ) {
 					if ( $item->menu_item_parent )
-						$menu_items_with_children[$item->menu_item_parent] = true;
+						$items_with_children[$item->menu_item_parent] = true;
 				}
 
 				// Add the menu-item-has-children class where applicable
-				if ( $menu_items_with_children ) {
+				if ( $items_with_children ) {
 					foreach ( $submenu_items as &$item ) {
 						if ( isset( $menu_items_with_children[ $item->ID ] ) )
 							$item->classes[] = 'menu-item-has-children';
