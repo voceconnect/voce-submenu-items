@@ -90,6 +90,21 @@ class Voce_Submenu_Nav_Menu_Items {
 					}
 				}
 
+				// Loop through and get menu_items with children
+				$menu_items_with_children = array();
+				foreach ( $submenu_items as $menu_item ) {
+					if ( $menu_item->menu_item_parent )
+						$menu_items_with_children[$menu_item->menu_item_parent] = true;
+				}
+
+				// Add the menu-item-has-children class where applicable
+				if ( $menu_items_with_children ) {
+					foreach ( $submenu_items as &$menu_item ) {
+						if ( isset( $menu_items_with_children[ $menu_item->ID ] ) )
+							$menu_item->classes[] = 'menu-item-has-children';
+					}
+				}
+
 				array_splice( $sorted_menu_items, ( $i - 1 ), 1, $submenu_items );
 				$sorted_menu_items = array_combine( range( 1, count( $sorted_menu_items ) ), array_values( $sorted_menu_items ) );
 				$i = 0;
