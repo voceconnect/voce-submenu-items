@@ -29,8 +29,9 @@ When a Menu containing other Menus as items is rendered, the "submenu" item is e
 == Changelog ==
 
 = 1.3 =
-* Fixing big with nested menus
+* Fixing bug with nested menus
 * Adding proper css class to parent items
+* Testing with 4.1
 
 = 1.2.2 =
 * VIP optimized images
